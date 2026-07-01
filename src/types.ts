@@ -1,0 +1,9 @@
+export type Package={id:string;name:string;price:string;duration:string;features:string[];bestFor:string;active:boolean};
+export type ConsultationRequest={id:string;createdAt:string;name:string;phone:string;email:string;goal:string;level:string;trainingType:string;contactMethod:string;notes:string;status:'new'|'contacted'};
+export type ProgressUpdate={id:string;date:string;weight:number;note:string};
+export type BodyMeasurement={id:string;date:string;chest:number;waist:number;hips:number;arm:number};
+export type WorkoutSession={id:string;clientId:string;title:string;date:string;time:string;completed:boolean};
+export type Client={id:string;name:string;email:string;phone:string;goal:string;packageId:string;status:'active'|'paused';joined:string;progress:ProgressUpdate[];measurements:BodyMeasurement[];notes:string[]};
+export type CoachSettings={businessName:string;coachName:string;whatsapp:string;email:string;instagram:string;paymentProvider:string};
+export type PaymentIntent={packageId:string;amount:string;status:'requires_configuration'|'ready'};
+export type AdminUser={email:string;password:string};
